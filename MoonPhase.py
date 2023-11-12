@@ -8,5 +8,4 @@ def main():
     data = soup.find("b", attrs={"style":"font-size:12px;"})
     s = str(data)
     s = s.removeprefix('<b style="font-size:12px;">').removesuffix('</b>')
-    print(s)
 main()

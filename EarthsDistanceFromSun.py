@@ -8,7 +8,7 @@ def main():
     data = soup.find("div", attrs={"class":"elementor-shortcode"})
     new_data = list(map(int, re.findall('\d+', str(data))))
     num = max_num_in_list(new_data)
-    print(num)
+    num = round(num,-3)
 
 
 def max_num_in_list(list):
