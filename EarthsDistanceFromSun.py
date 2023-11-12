@@ -1,4 +1,3 @@
-
 import re
 from bs4 import BeautifulSoup
 import requests
@@ -9,7 +8,7 @@ def main():
     data = soup.find("div", attrs={"class":"elementor-shortcode"})
     new_data = list(map(int, re.findall('\d+', str(data))))
     num = max_num_in_list(new_data)
-    print(round(num,-3))
+    print(num)
 
 
 def max_num_in_list(list):
